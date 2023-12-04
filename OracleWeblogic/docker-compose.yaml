@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  wlsadmin-1213:
+    image: 1213-domain
+    container_name: wlsadmin-1213
+    hostname: wlsadmin
+    ports:
+      - "8001:8001"
+      - "7001:7001"
+      - "7002:7002"
+    volumes:
+      - wl-data:/u01/oracle/user_projects/domains/base_domain/servers/AdminServer
+
+
+volumes:
+  wl-data:
